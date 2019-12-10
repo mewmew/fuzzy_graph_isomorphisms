@@ -1,0 +1,25 @@
+\ProvidesPackage{preamble}
+
+% Sub figures.
+%
+% Examples:
+%    \begin{figure}[htbp]
+%       \centering
+%       \begin{subfigure}[ht]{0.45\textwidth}
+%          \centering
+%          foo
+%       \end{subfigure}
+%       \begin{subfigure}[ht]{0.45\textwidth}
+%          \centering
+%          foo
+%       \end{subfigure}
+%       \caption{foo}
+%    \end{figure}
+\usepackage{subcaption}
+
+% Add \todo command to underline text in yellow.
+%
+% Examples:
+%    \todo{foo}
+\usepackage{adjustbox}
+\newcommand{\todo}[1]{\adjustbox{bgcolor=yellow}{#1}}

@@ -1,0 +1,84 @@
+% === [ Introduction ] =========================================================
+
+% ====>>>>> Primer
+
+% Fuzzy Graph Theory
+
+% Quickly cover the background terminology of Fuzzy Logic and Fuzzy Graph
+% Theory.
+
+\begin{frame}
+	\frametitle{A Primer to Fuzzy Graph Theory}
+
+	% Fuzzy Logic used to handle uncertainty.
+	\todo{remove this subdisposition?}
+	\begin{enumerate}
+		\item Fuzzy Logic
+		\item Fuzzy Graph Theory
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fuzzy Logic}
+
+	\begin{block}{Fuzzy Subsets}
+		% sigma
+		A \textit{fuzzy subset} of a set $S$ is a mapping $\sigma: S \rightarrow [0, 1]$ which assigns each item $x \in S$ a degree of membership $0 \le \sigma(x) \le 1$.
+
+		\vspace*{2em}
+
+		Examples:
+		\begin{itemize}
+			\item $Deina \in old$ with $\sigma(Deina) = 0.3$
+			\begin{itemize}
+				\item The item $Deina$ (woman at age $34$) is a member of the set $old$ to a degree of $0.3$
+			\end{itemize}
+			\item $Foufoutos \in old$ with $\sigma(Foufoutos) = 0.5$
+			\begin{itemize}
+				\item The item $Foufoutos$ (man at age $45$) is a member of the set $old$ to a degree of $0.5$
+			\end{itemize}
+			\item $Tade \in old$ with $\sigma(Tade) = 0.1$
+			\begin{itemize}
+				\item The item $Tade$ (boy at age $6$) is a member of the set $old$ to a degree of $0.1$
+			\end{itemize}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+% contributions:
+% * show how to generalize fuzzy relationship to map into a fuzzy subset of a set $S$.
+% * present fuzzy analogs of graph-theoretic concepts.
+
+\begin{frame}
+	\frametitle{Fuzzy Logic}
+
+	\begin{block}{Fuzzy Relationships}
+		% mu
+		A \textit{fuzzy relationship} on a set $S$ is a mapping $\mu: S \times S \rightarrow [0, 1]$ which assigns each ordered pair $(x, y) \in S \times S$ a degree of membership $0 \le \mu(x, y) \le 1$. In other words, a fuzzy relatipship on $S$ is a fuzzy subset of $S \times S$.
+
+		\vspace*{2em}
+
+		Examples:
+		\begin{itemize}
+			\item $(Deina, Tade) \in mothers$ with $\mu(Deina, Tade) = 1.0$, where $mothers: person \times person$
+			\begin{itemize}
+				\item The ordered pair $(Deina, Tade)$ is a $(mother, child)$-relationship on the set $person$ to a degree of $1.0$
+			\end{itemize}
+			\item $(Foufoutos, Tade) \in fathers$ with $\mu(Foufoutos, Tade) = 0.5$, where $fathers: person \times person$
+			\begin{itemize}
+				\item The ordered pair $(Foufoutos, Tade)$ is a $(father, child)$-relationship on the set $person$ to a degree of $0.5$
+			\end{itemize}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fuzzy Graph Theory}
+
+	\begin{block}{Fuzzy Logic Analogies in Graph Theory}
+		\todo{find proper name for $F(\sigma, \mu)$}
+
+		Given a graph $G(V, E)$ with verticies $v \in V$ and edges $e \in E$, a fuzzy graph $F(\sigma, \mu)$ represent verticies as a \textit{fuzzy subset} $\sigma: V \rightarrow [0, 1]$ of $V$ and the edges as a \textit{fuzzy relatipship} $\mu: V \times V \rightarrow [0, 1]$ on $V$. In other words, since $E: V \times V$, $\mu: E \rightarrow [0, 1]$.
+	\end{block}
+\end{frame}

@@ -1,0 +1,73 @@
+\documentclass[aspectratio=1610]{beamer}
+
+\usetheme{KTH}
+\usepackage{preamble}
+
+\usepackage[backend=bibtex]{biblatex}
+
+\addbibresource{references.bib}
+
+\renewcommand{\footnotesize}{\tiny}
+
+% Advice from Schule, that was given to him as advice when he was becoming a researcher.
+%
+% Three thirds, 1 third for everybody, 1 third for experts, and 1 third for yourself to show off.
+
+% ====>>>>> general
+
+%% The slides should be for the audience, to give them a visual experience.
+%% Transitions; one style for the slides and one style for the transitions between topics. e.g. light background, dark text vs. dark background, light text.
+%% Don't write too much on the slides.
+%% Skip effects.
+%% Masking images to direct attention.
+%% Simple charts and graphs. If possible, in the same style as the presentation (e.g. fonts, colors).
+
+\begin{document}
+
+% Add page numbers.
+\addtobeamertemplate{navigation symbols}{}{\insertframenumber / \inserttotalframenumber}
+
+% === [ Start page ] ===========================================================
+
+\startpage
+
+\begin{frame}
+	\vspace{0.02\textheight}
+
+	\begin{Large}
+		``Fuzzy morphisms between graphs'' {\small (Perchant \& Bloch, 2002)} and \\ ``Fuzzy graphs'' {\small (Rosenfeld, 1975)}
+	\end{Large}
+
+	\vspace{0.1\textheight}
+
+	\begin{small}
+		\textit{Robin Eklind}
+	\end{small}
+\end{frame}
+
+% === [ Disposition ] ==========================================================
+
+\normalpage
+
+\begin{frame}
+	\frametitle{Disposition}
+
+	\begin{enumerate}
+		\item Primer \textit{Fuzzy Graph Theory}
+		\item What? \textit{Fuzzy Graph Isomorphisms}
+		\item Why? \textit{Applications of Fuzzy Graph Isomorphisms}
+		\item How? \textit{Locating Fuzzy Graph Isomorphisms}
+		\item Conclusions
+		\item Demo!
+	\end{enumerate}
+\end{frame}
+
+
+\input{sections/1_intro.tex}
+\input{sections/2_what.tex}
+\input{sections/3_why.tex}
+\input{sections/4_how.tex}
+\input{sections/5_conclusions.tex}
+\input{sections/6_demo.tex}
+
+\end{document}
