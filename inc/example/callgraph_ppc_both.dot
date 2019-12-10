@@ -1,0 +1,19 @@
+digraph {
+	"sub_8C0A0_fn_SyncOpObject" []
+	"sub_8BB14_fn_OperateObject" []
+	"sub_8B9C4_fn_OperateStoryBook" [fillcolor=lightblue style=filled]
+	"sub_8BA6C_fn_OperateLazStand" [fillcolor=lightgrey style=filled]
+	"sub_3BEBC_fn_PlaySfxLoc" []
+	"sub_5BC70_fn_InitQTextMsg" []
+	"sub_7AA10_fn_NetSendCmdParam1" []
+	"sub_4CFE4_fn_GetSuperItemLoc" []
+	"sub_4FE3C_fn_SpawnQuestItem" []
+	"sub_8C0A0_fn_SyncOpObject" -> "sub_8B9C4_fn_OperateStoryBook"
+	"sub_8BB14_fn_OperateObject" -> "sub_8B9C4_fn_OperateStoryBook"
+	"sub_8BB14_fn_OperateObject" -> "sub_8BA6C_fn_OperateLazStand"
+	"sub_8B9C4_fn_OperateStoryBook" -> "sub_3BEBC_fn_PlaySfxLoc"
+	"sub_8B9C4_fn_OperateStoryBook" -> "sub_5BC70_fn_InitQTextMsg"
+	"sub_8B9C4_fn_OperateStoryBook" -> "sub_7AA10_fn_NetSendCmdParam1"
+	"sub_8BA6C_fn_OperateLazStand" -> "sub_4CFE4_fn_GetSuperItemLoc"
+	"sub_8BA6C_fn_OperateLazStand" -> "sub_4FE3C_fn_SpawnQuestItem"
+}

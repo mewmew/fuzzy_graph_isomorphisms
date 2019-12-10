@@ -17,9 +17,34 @@
 %    \end{figure}
 \usepackage{subcaption}
 
+% Top align subfigures in floating environment.
+%
+% Examples:
+%    \begin{figure}[htbp]
+%       \centering
+%       \begin{subfigure}[t]{0.45\textwidth}
+%          \centering
+%          \includegraphics[width=\linewidth,valign=t]{a.png}
+%       \end{subfigure}
+%       \hfill
+%       \begin{subfigure}[t]{0.45\textwidth}
+%          \centering
+%          \includegraphics[width=\linewidth,valign=t]{b.png}
+%       \end{subfigure}
+%       \caption{foo}
+%    \end{figure}
+\usepackage[export]{adjustbox}
+
 % Add \todo command to underline text in yellow.
 %
 % Examples:
 %    \todo{foo}
-\usepackage{adjustbox}
+%\usepackage{adjustbox}
 \newcommand{\todo}[1]{\adjustbox{bgcolor=yellow}{#1}}
+
+% Source code listings, language definitions and styles.
+%
+% Examples:
+%    \lstinputlisting[language=llvm, style=nasm]{foo.ll}
+\usepackage{listings}
+\usepackage{latex/c/style}

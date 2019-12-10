@@ -1,0 +1,23 @@
+digraph {
+	"SyncOpObject__Fiii" []
+	"OperateObject__FiiUc" []
+	"OperateStoryBook__Fii" [fillcolor=lightblue style=filled]
+	"OperateLazStand__Fii" [fillcolor=lightgrey style=filled]
+	"PlaySfxLoc__Fiii" []
+	"InitQTextMsg__Fi" []
+	"NetSendCmdParam1__FUcUcUs" []
+	"PlaySFX__Fi" [color=red style=dashed]
+	"GetSuperItemLoc__FiiRiT2" []
+	"SpawnQuestItem__Fiiiii" []
+	"SyncOpObject__Fiii" -> "OperateStoryBook__Fii"
+	"SyncOpObject__Fiii" -> "OperateLazStand__Fii" [color=red style=dashed]
+	"OperateObject__FiiUc" -> "OperateStoryBook__Fii"
+	"OperateObject__FiiUc" -> "OperateLazStand__Fii"
+	"OperateStoryBook__Fii" -> "PlaySfxLoc__Fiii"
+	"OperateStoryBook__Fii" -> "InitQTextMsg__Fi"
+	"OperateStoryBook__Fii" -> "NetSendCmdParam1__FUcUcUs"
+	"OperateLazStand__Fii" -> "PlaySFX__Fi"  [color=red style=dashed]
+	"OperateLazStand__Fii" -> "GetSuperItemLoc__FiiRiT2"
+	"OperateLazStand__Fii" -> "SpawnQuestItem__Fiiiii"
+	"OperateLazStand__Fii" -> "NetSendCmdParam1__FUcUcUs"  [color=red style=dashed]
+}

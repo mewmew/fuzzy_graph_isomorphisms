@@ -1,0 +1,19 @@
+digraph {
+	"sub_8C0A0" []
+	"sub_8BB14" []
+	"sub_8B9C4" [fillcolor=lightblue style=filled]
+	"sub_8BA6C" [fillcolor=lightgrey style=filled]
+	"sub_3BEBC" []
+	"sub_5BC70" []
+	"sub_7AA10" []
+	"sub_4CFE4" []
+	"sub_4FE3C" []
+	"sub_8C0A0" -> "sub_8B9C4"
+	"sub_8BB14" -> "sub_8B9C4"
+	"sub_8BB14" -> "sub_8BA6C"
+	"sub_8B9C4" -> "sub_3BEBC"
+	"sub_8B9C4" -> "sub_5BC70"
+	"sub_8B9C4" -> "sub_7AA10"
+	"sub_8BA6C" -> "sub_4CFE4"
+	"sub_8BA6C" -> "sub_4FE3C"
+}

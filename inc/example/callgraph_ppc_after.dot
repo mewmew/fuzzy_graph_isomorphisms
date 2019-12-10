@@ -1,0 +1,19 @@
+digraph {
+	"SyncOpObject" []
+	"OperateObject" []
+	"OperateStoryBook" [fillcolor=lightblue style=filled]
+	"OperateLazStand" [fillcolor=lightgrey style=filled]
+	"PlaySfxLoc" []
+	"InitQTextMsg" []
+	"NetSendCmdParam1" []
+	"GetSuperItemLoc" []
+	"SpawnQuestItem" []
+	"SyncOpObject" -> "OperateStoryBook"
+	"OperateObject" -> "OperateStoryBook"
+	"OperateObject" -> "OperateLazStand"
+	"OperateStoryBook" -> "PlaySfxLoc"
+	"OperateStoryBook" -> "InitQTextMsg"
+	"OperateStoryBook" -> "NetSendCmdParam1"
+	"OperateLazStand" -> "GetSuperItemLoc"
+	"OperateLazStand" -> "SpawnQuestItem"
+}
