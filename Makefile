@@ -1,4 +1,4 @@
-all: fuzzy_graph_isomorphisms.pdf
+all: fuzzy_graph_morphisms.pdf
 
 %.pdf: %.tex
 	latexrun --latex-cmd=xelatex -o $@ $<
@@ -9,4 +9,4 @@ all: fuzzy_graph_isomorphisms.pdf
 
 clean:
 	$(RM) -rv latex.out
-	$(RM) -v fuzzy_graph_isomorphisms.pdf
+	$(RM) -v fuzzy_graph_morphisms.pdf
