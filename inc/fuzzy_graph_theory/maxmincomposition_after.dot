@@ -1,0 +1,8 @@
+digraph {
+	u1 [label=<u<sub>1</sub>>]
+	u2 [label=<u<sub>2</sub>>]
+	u3 [label=<u<sub>3</sub>>]
+
+	u1 -> u2 [label=<&nbsp;μ(u<sub>1</sub>, u<sub>2</sub>) = 0.5>]
+	u2 -> u3 [label=<&nbsp;μ(u<sub>2</sub>, u<sub>3</sub>) = 0.6>]
+}
