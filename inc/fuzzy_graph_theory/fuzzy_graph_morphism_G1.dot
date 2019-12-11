@@ -1,0 +1,13 @@
+digraph G1 {
+	a1 [label=<a<sub>1</sub>>]
+	b1 [label=<b<sub>1</sub>>]
+	c1 [label=<c<sub>1</sub>>]
+	d1 [label=<d<sub>1</sub>>]
+	e1 [label=<e<sub>1</sub>>]
+
+	b1 -> a1
+	b1 -> e1
+	c1 -> b1
+	c1 -> e1
+	d1 -> e1
+}

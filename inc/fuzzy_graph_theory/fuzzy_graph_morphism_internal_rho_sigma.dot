@@ -1,0 +1,20 @@
+digraph internal_rho_sigma {
+	rankdir=LR
+
+	a1 [label=<a<sub>1</sub>>]
+	b1 [label=<b<sub>1</sub>>]
+	c1 [label=<c<sub>1</sub>>]
+	d1 [label=<d<sub>1</sub>> style=dashed]
+	e1 [label=<e<sub>1</sub>>]
+	a2 [label=<a<sub>2</sub>>]
+	b2 [label=<b<sub>2</sub>>]
+	c2 [label=<c<sub>2</sub>>]
+	d2 [label=<d<sub>2</sub>>]
+
+	a1 -> a2 [label="0.8"]
+	b1 -> b2 [label="0.9"]
+	c1 -> c2 [label="0.7"]
+	d1 -> b2 [label="0.2" style=dashed]
+	e1 -> a2 [label="0.6" style=dashed]
+	e1 -> d2 [label="0.9"]
+}

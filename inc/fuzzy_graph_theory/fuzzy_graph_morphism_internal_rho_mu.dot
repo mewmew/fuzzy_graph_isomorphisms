@@ -1,0 +1,14 @@
+digraph internal_rho_mu {
+	a1a2 [label=<a<sub>1</sub>a<sub>2</sub>> xlabel="0.8"]
+	b1b2 [label=<b<sub>1</sub>b<sub>2</sub>> xlabel="0.9"]
+	c1c2 [label=<c<sub>1</sub>c<sub>2</sub>> xlabel="0.7"]
+	d1b2 [label=<d<sub>1</sub>b<sub>2</sub>> style=dashed xlabel="0.2"]
+	e1a2 [label=<e<sub>1</sub>a<sub>2</sub>> style=dashed xlabel="0.6"]
+	e1d2 [label=<e<sub>1</sub>d<sub>2</sub>> xlabel="0.9"]
+
+	b1b2 -> a1a2 [label="< 0.8"]
+	b1b2 -> e1d2 [label="< 0.9"]
+	c1c2 -> b1b2 [label="< 0.7"]
+	c1c2 -> e1d2 [label="< 0.7"]
+	d1b2 -> e1a2 [label="< 0.2" style=dashed]
+}
