@@ -1,0 +1,91 @@
+digraph G {
+	rankdir=LR
+	ranksep=1.5
+	nodesep=0.15
+
+	a1_b1a1 [label=<a<sub>1</sub>>]
+	b1_b1a1 [label=<b<sub>1</sub>>]
+	b1_b1e1 [label=<b<sub>1</sub>>]
+	b1_c1b1 [label=<b<sub>1</sub>>]
+	c1_c1b1 [label=<c<sub>1</sub>>]
+	c1_c1e1 [label=<c<sub>1</sub>>]
+	d1_d1e1 [label=<d<sub>1</sub>>]
+	e1_b1e1 [label=<e<sub>1</sub>>]
+	e1_c1e1 [label=<e<sub>1</sub>>]
+	e1_d1e1 [label=<e<sub>1</sub>>]
+
+	// dummy nodes used to connect edges.
+	b1a1 [shape=point width=0]
+	b1e1 [shape=point width=0]
+	c1b1 [shape=point width=0]
+	c1e1 [shape=point width=0]
+	d1e1 [shape=point width=0]
+
+	subgraph cluster_0 {
+		// b1 -> a1
+		b1_b1a1 -> b1a1 [arrowhead=none]
+		b1a1 -> a1_b1a1
+
+		// b1 -> e1
+		b1_b1e1 -> b1e1 [arrowhead=none]
+		b1e1 -> e1_b1e1
+
+		// c1 -> b1
+		c1_c1b1 -> c1b1 [arrowhead=none]
+		c1b1 -> b1_c1b1
+
+		// c1 -> e1
+		c1_c1e1 -> c1e1 [arrowhead=none]
+		c1e1 -> e1_c1e1
+
+		// d1 -> e1
+		d1_d1e1 -> d1e1 [arrowhead=none]
+		d1e1 -> e1_d1e1
+
+		label=<E<sub>1</sub>>
+	}
+
+	a2_b2a2 [label=<a<sub>2</sub>>]
+	b2_b2a2 [label=<b<sub>2</sub>>]
+	b2_b2d2 [label=<b<sub>2</sub>>]
+	b2_c2b2 [label=<b<sub>2</sub>>]
+	c2_c2b2 [label=<c<sub>2</sub>>]
+	c2_c2d2 [label=<c<sub>2</sub>>]
+	d2_b2d2 [label=<d<sub>2</sub>>]
+	d2_c2d2 [label=<d<sub>2</sub>>]
+
+	// dummy nodes used to connect edges.
+	b2a2 [shape=point width=0]
+	b2d2 [shape=point width=0]
+	c2b2 [shape=point width=0]
+	c2d2 [shape=point width=0]
+
+	subgraph cluster_1 {
+		// b2 -> a2
+		b2_b2a2 -> b2a2 [arrowhead=none]
+		b2a2 -> a2_b2a2
+
+		// b2 -> d2
+		b2_b2d2 -> b2d2 [arrowhead=none]
+		b2d2 -> d2_b2d2
+
+		// c2 -> b2
+		c2_c2b2 -> c2b2 [arrowhead=none]
+		c2b2 -> b2_c2b2
+
+		// c2 -> d2
+		c2_c2d2 -> c2d2 [arrowhead=none]
+		c2d2 -> d2_c2d2
+
+		label=<E<sub>2</sub>>
+	}
+
+	{rank=same; b1_b1a1; b1a1; a1_b1a1; b1_b1e1; b1e1; e1_b1e1; c1_c1b1; c1b1; b1_c1b1; c1_c1e1; c1e1; e1_c1e1; d1_d1e1; d1e1; e1_d1e1}
+	{rank=same; b2_b2a2; b2a2; a2_b2a2; b2_b2d2; b2d2; d2_b2d2; c2_c2b2; c2b2; b2_c2b2; c2_c2d2; c2d2; d2_c2d2}
+
+	b1a1 -> b2a2 [arrowhead=none label="< 0.8"]
+	c1b1 -> c2b2 [arrowhead=none label="< 0.7"]
+	b1e1 -> b2d2 [arrowhead=none label="< 0.9"]
+	d1e1 -> b2a2 [arrowhead=none label="< 0.2" style=dashed]
+	c1e1 -> c2d2 [arrowhead=none label="< 0.7"]
+}
